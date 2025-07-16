@@ -14,7 +14,6 @@ scoreboard objectives add afk.rotation_prev dummy
 
 # .threshold is a user-configurable setting that controls how many seconds of inactivity
 # it takes for a player to become AFK. 6000 ticks is 300 seconds - this is to match What_Are_They_Up_To.mod idle timer
-# default. It's long enough to yellow without going AFK, but not long enough to brown :^)
 execute unless score .threshold afk.settings matches 1.. run scoreboard players set .threshold afk.settings 6000
 
 function afk:loop
